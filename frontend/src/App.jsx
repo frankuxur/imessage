@@ -5,6 +5,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import { Navigate, Route, Routes } from 'react-router'
 import ChatPage from './pages/ChatPage'
 import AuthPage from './pages/AuthPage'
+import PageLoader from './components/PageLoader'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
   // todo: make this a better component
   if (!isLoaded) {
-    return <p>Loading...</p>
+    return <PageLoader />
   }
  
   return (
